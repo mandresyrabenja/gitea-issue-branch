@@ -1,0 +1,33 @@
+name: "Create branch in Gitea"
+description: "Creates a git branch from an issue and links it back."
+author: "Mandresy RABENJAHARISON <mandresyrabenj@gmail.com>"
+branding:
+  icon: git-branch
+  color: purple
+
+inputs:
+  ISSUE_LABELS:
+    description: "Issue Labels."
+    required: true
+  ISSUE_NUMBER:
+    description: "Issue Number."
+    required: true
+  ISSUE_TITLE:
+    description: "Issue Title."
+    required: true
+  GITEA_TOKEN:
+    description: "Gitea Access Token."
+    required: true
+  GITEA_URL:
+    description: "Gitea Instance URL."
+    required: true
+  REPO_OWNER:
+    description: "Git Repository Owner."
+    required: true
+  REPO_NAME:
+    description: "Repository Name."
+    required: true
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
