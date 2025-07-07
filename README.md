@@ -43,7 +43,7 @@
 Exactly the same YAML—`act_runner` builds the Dockerfile automatically:
 
 ```yaml
-      - uses: you/gitea-create-branch-action@v1
+      - uses: mandresyrabenja/gitea-issue-branch@v1
         env:
           GITEA_URL:   https://git.example.com
           GITEA_TOKEN: ${{ secrets.GITEA_TOKEN }}
