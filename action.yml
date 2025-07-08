@@ -31,3 +31,11 @@ inputs:
 runs:
   using: "docker"
   image: "Dockerfile"
+  env:
+    ISSUE_LABELS: ${{ inputs.ISSUE_LABELS }}
+    ISSUE_NUMBER: ${{ inputs.ISSUE_NUMBER }}
+    ISSUE_TITLE: ${{ inputs.ISSUE_TITLE }}
+    GITEA_TOKEN: ${{ inputs.GITEA_TOKEN }}
+    GITEA_URL: ${{ inputs.GITEA_URL }}
+    REPO_OWNER: ${{ inputs.REPO_OWNER }}
+    REPO_NAME: ${{ inputs.REPO_NAME }}
