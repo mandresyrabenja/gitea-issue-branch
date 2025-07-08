@@ -6,25 +6,25 @@ branding:
   color: purple
 
 inputs:
-  ISSUE_LABELS:
+  issue_labels:
     description: "Issue Labels."
     required: true
-  ISSUE_NUMBER:
+  issue_number:
     description: "Issue Number."
     required: true
-  ISSUE_TITLE:
+  issue_title:
     description: "Issue Title."
     required: true
-  GITEA_TOKEN:
+  gitea_token:
     description: "Gitea Access Token."
     required: true
-  GITEA_URL:
+  gitea_url:
     description: "Gitea Instance URL."
     required: true
-  REPO_OWNER:
+  repo_owner:
     description: "Git Repository Owner."
     required: true
-  REPO_NAME:
+  repo_name:
     description: "Repository Name."
     required: true
 
@@ -32,10 +32,10 @@ runs:
   using: "docker"
   image: "Dockerfile"
   env:
-    ISSUE_LABELS: ${{ inputs.ISSUE_LABELS }}
-    ISSUE_NUMBER: ${{ inputs.ISSUE_NUMBER }}
-    ISSUE_TITLE: ${{ inputs.ISSUE_TITLE }}
-    GITEA_TOKEN: ${{ inputs.GITEA_TOKEN }}
-    GITEA_URL: ${{ inputs.GITEA_URL }}
-    REPO_OWNER: ${{ inputs.REPO_OWNER }}
-    REPO_NAME: ${{ inputs.REPO_NAME }}
+    ISSUE_LABELS: ${{ inputs.issue_labels }}
+    ISSUE_NUMBER: ${{ inputs.issue_number }}
+    ISSUE_TITLE: ${{ inputs.issue_title }}
+    GITEA_TOKEN: ${{ inputs.gitea_token }}
+    GITEA_URL: ${{ inputs.gitea_url }}
+    REPO_OWNER: ${{ inputs.repo_owner }}
+    REPO_NAME: ${{ inputs.repo_name }}
