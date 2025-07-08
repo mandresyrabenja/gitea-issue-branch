@@ -33,6 +33,9 @@ func main() {
 	repoOwner := os.Getenv("REPO_OWNER")
 	repoName := os.Getenv("REPO_NAME")
 
+	logger.Printf("Environment variables: ISSUE_NUMBER=%s, ISSUE_TITLE=%s, ISSUE_LABELS=%s, GITEA_TOKEN=%s, GITEA_URL=%s, REPO_OWNER=%s, REPO_NAME=%s\n",
+		issueNumberStr, issueTitle, labelsStr, giteaToken, giteaAPIURL, repoOwner, repoName)
+
 	if issueNumberStr == "" || issueTitle == "" || giteaToken == "" || giteaAPIURL == "" || repoOwner == "" || repoName == "" {
 		logger.Println("Error: some environment variables are missing.")
 		os.Exit(1)
