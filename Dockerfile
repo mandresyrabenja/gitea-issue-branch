@@ -22,6 +22,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -o /out/action ./main.go
 # — Runtime stage —
 ########################
 FROM alpine:3.20
-RUN apk add --no-cache git
+RUN apk add --no-cache git ca-certificates openssh
+ENV PATH="/usr/bin:/usr/sbin:/bin:/sbin"
 COPY --from=builder /out/action /usr/local/bin/action
 ENTRYPOINT ["/usr/local/bin/action"]
