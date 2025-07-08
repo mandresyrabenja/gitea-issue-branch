@@ -55,8 +55,8 @@ func main() {
 		os.Exit(1)
 	}
 
-	// Form the branch name in the format "prefix/us-number"
-	branchName := fmt.Sprintf("%s/us-%d", prefix, issueNumber)
+	// Form the branch name in the format "prefix/ticket-number"
+	branchName := fmt.Sprintf("%s/ticket-%d", prefix, issueNumber)
 
 	logger.Printf("Branch name set to: %s\n", branchName)
 
